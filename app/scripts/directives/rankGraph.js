@@ -10,7 +10,7 @@
           country: '=',
           age: '='
         },
-        link: function ($scope, element) {
+        link: function ($scope, element, attr) {
           var width = 300,
             height = 150;
 
@@ -77,7 +77,7 @@
           var _updateGraph = function(data) {
             var age = $scope.age;
 
-//            var peopleTotal = d3.sum(data, function (d) { return d.total; });
+            var peopleTotal = d3.sum(data, function (d) { return d.total; });
 
             var xScale = d3.scale.linear()
               .domain([
@@ -155,7 +155,7 @@
                   transform: function () {
                     return 'translate(' + [
                       xScale(age),
-                      height - (height - yScale(item.total))
+                        height - (height - yScale(item.total))
                     ] + ')';
                   }
                 });
@@ -196,10 +196,10 @@
                 });
 
               pointer.select('.text-block').transition().duration(1000).attr({
-                  transform: function () {
-                    return 'translate(' + [width - xScale(age) - 10, 0] + ')';
-                  }
-                });
+                transform: function () {
+                  return 'translate(' + [width - xScale(age) - 10, 0] + ')';
+                }
+              });
               pointer.select('.percentage')
                 .text(function() {
                   var ageTxt = ProfileService.getAgeString();

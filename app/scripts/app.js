@@ -12,7 +12,7 @@
       $httpProvider.defaults.useXDomain = true;
       delete $httpProvider.defaults.headers.common['X-Requested-With'];
     })
-    .run(function ($rootScope) {
+    .run(function ($rootScope, $location, $document) {
       console.log('App is running...');
       $rootScope.currentPage = 0;
     })
