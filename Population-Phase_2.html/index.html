@@ -1,0 +1,1577 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title></title>
+<script type="text/javascript" src="outliner.js"></script>
+<style type="text/css">
+.done {
+  color: white;
+  background: #45d316;
+}
+
+.pending {
+  color: white;
+  background: orange;
+}
+.inprogress{
+  color:white;
+  background: darkolivegreen;
+}
+
+th {
+  vertical-align: bottom;
+
+}
+
+td {
+  vertical-align: top;
+}
+
+td, th {
+
+  empty-cells: show;
+}
+
+.top-right-border {
+
+}
+
+.no-border {
+  border-bottom: 0px;
+  border-left: 0px;
+}
+
+table {
+
+  font-family: Helvetica, sans-serif;
+  font-size: 12px;
+
+}
+
+.wholeDocument {
+
+}
+
+td.subcell {
+  border: none;
+}
+
+td.content {
+  padding-left: 4px;
+  padding-bottom: 2px;
+  padding-top: 1px;
+  padding-right: 3px;
+}
+
+.full {
+  height: 100%;
+}
+
+.heighthack {
+  height: 8px;
+}
+
+div.titlepadding {
+  padding-right: 3px;
+  padding-left: 6px;
+  padding-bottom: 3px;
+  padding-top: 2px;
+}
+
+.summary_node {
+  background: rgba(0, 0, 0, .12);
+  margin-bottom: 1px;
+}
+
+div.column {
+  padding-right: 3px;
+  padding-left: 4px;
+  padding-top: 1px;
+  padding-bottom: 2px;
+  margin-right: 1px;
+}
+
+.labelpadding {
+  padding-right: 3px;
+  padding-top: 1px;
+  padding-left: 2px;
+}
+
+.indicator {
+  white-space: nowrap;
+  text-align: right;
+  margin-right: 0px;
+  vertical-align: top;
+  padding-top: 1px;
+  padding-left: 0px;
+}
+
+.wholedocgutter {
+
+}
+
+div.row {
+}
+
+div.headerRow {
+}
+
+.expanded {
+  display: inline;
+}
+
+.collapsed {
+  display: none;
+}
+
+div.palette-hit-zone {
+  position: fixed;
+  bottom: 0px;
+  height: 33%;
+  left: 50%;
+  width: 66%;
+  margin-left: -33%;
+}
+
+div.floating-palette {
+  -webkit-border-radius: 5px;
+  -webkit-transition: opacity is fade-in-out;
+  -webkit-transition-duration: 1s;
+  background-color: rgb(64, 64, 64);
+  opacity: 0.7;
+  width: 88px;
+  height: 44px;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -44px;
+}
+
+div.palette-cell {
+  opacity: 1;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  position: absolute;
+  height: 32px;
+  width: 32px;
+}
+
+div.cell-divider {
+  position: absolute;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  margin-left: 44px;
+  height: 32px;
+  width: 0px;
+  position: absolute;
+  left: 0px;
+  border-right: rgb(207, 207, 207) 2px solid;
+}
+
+.altRow {
+  background-color: rgb(239, 239, 239) !important;
+}
+
+.note {
+  padding-left: 5px;
+  padding-right: 3px;
+  border: none;
+  color: rgb(84, 84, 84);
+  font-size: 11px;
+  font-size: 11px;
+}
+
+/* Total table width is 1250
+Adjusted table width is 1325 */
+
+.wholething {
+  width: auto;
+}
+
+table.row {
+
+  width: 1250px;
+
+}
+
+.col_width1 {
+  width: 1150px; /* Actual width is 1150 */
+}
+
+.col_width2 {
+  width: 100px; /* Actual width is 100 */
+}
+
+.col1 {
+
+}
+
+.col2 {
+
+}
+
+.colbackground1 {
+
+}
+
+.colbackground2 {
+
+}
+
+/* Level Styles */
+
+.columntitle {
+  font-weight: 900;
+}
+
+.level1 {
+
+}
+
+.levelcolor1 {
+  background-color: rgb(203, 251, 103);
+}
+
+.levelguttercolor1 {
+
+}
+
+.level2 {
+
+}
+
+.levelcolor2 {
+  background-color: rgb(207, 239, 254);
+}
+
+.levelguttercolor2 {
+
+}
+
+.ns-Hervorhebung {
+}
+
+.ns-Zitat {
+  text-decoration: underline;
+}
+
+.ns-Betonung {
+  font-style: italic;
+}
+
+.ns-bg-Hervorhebung {
+  background-color: rgb(255, 255, 102);
+}
+
+.ns-bg-Zitat {
+}
+
+.ns-bg-Betonung {
+}
+
+.ns-gutter-Hervorhebung {
+}
+
+.ns-gutter-Zitat {
+}
+
+.ns-gutter-Betonung {
+}
+</style>
+</head>
+<body class="wholeDocument altRowColors">
+<table cellspacing="0" cellpadding="0" class="top-right-border">
+<tr>
+<td class="wholething no-border">
+<!--Column Titles-->
+<table cellspacing="0" border="0" cellpadding="0" class="headerRow heighthack">
+  <tr>
+    <td class=" colbackground1 col_width1">
+      <div class="columntitle titlepadding">Population.io Phase 2 (8 SEP 3014)<br>
+      </div>
+    </td>
+    <td class=" colbackground2 col_width2">
+      <div class="columntitle titlepadding">Priority<br>
+      </div>
+    </td>
+  </tr>
+</table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+  <tr>
+    <td class=" col1 colbackground1 col_width1" style="">
+      <div class=" full levelcolor1">
+        <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+          <tr>
+            <td class=" subcell wholedocgutter level1 levelguttercolor1" style="width: 9px;"></td>
+            <td class=" subcell wholedocgutter indicator level1 levelguttercolor1" style="width: 15px;"><img onmousedown="ioSwitch('pfxmphHXZo27', event.shiftKey)" id="ifxmphHXZo27" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+            <td class=" content level1 subcell">Population.io (Website)<br>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+    <td class=" col2 colbackground2 col_width2" style="">
+      <div class=" full levelcolor1">
+        <div class="full column level1" style=""></div>
+      </div>
+    </td>
+  </tr>
+</table>
+<div id="pfxmphHXZo27" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+  <tr>
+    <td class=" col1 colbackground1 col_width1" style="">
+      <div class=" full levelcolor2">
+        <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+          <tr>
+            <td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+            <td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img onmousedown="ioSwitch('pmy0446bi_WL', event.shiftKey)" id="imy0446bi_WL" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+            <td class=" content level2 subcell">General<br>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+    <td class=" col2 colbackground2 col_width2" style="">
+      <div class=" full levelcolor2">
+        <div class="full column level2" style=""></div>
+      </div>
+    </td>
+  </tr>
+</table>
+<div id="pmy0446bi_WL" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+  <tr>
+    <td class=" col1 colbackground1 col_width1" style="">
+      <div class=" full levelcolor3">
+        <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+          <tr>
+            <td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+            <td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+            <td class=" content level3 subcell">Display the loading spinner always visible (absolute layout on top of everything)!<br>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+    <td class=" col2 colbackground2 col_width2" style="">
+      <div class=" full levelcolor3">
+        <div class="full column level3" style=""></div>
+      </div>
+    </td>
+  </tr>
+</table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+  <tr>
+    <td class=" col1 colbackground1 col_width1" style="">
+      <div class=" full levelcolor3">
+        <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+          <tr>
+            <td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+            <td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+            <td class=" content level3 subcell">Internetexplorer 11 Support, adjust the browser warning accordingly "min IE 11!"<br>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+    <td class=" col2 colbackground2 col_width2" style="">
+      <div class=" full levelcolor3">
+        <div class="full column level3" style=""></div>
+      </div>
+    </td>
+  </tr>
+</table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+  <tr>
+    <td class=" col1 colbackground1 col_width1" style="">
+      <div class=" full levelcolor3">
+        <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+          <tr>
+            <td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+            <td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+            <td class=" content level3 subcell pending">? Change to new country names csv file (an update is in the making)<br>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+    <td class=" col2 colbackground2 col_width2" style="">
+      <div class=" full levelcolor3">
+        <div class="full column level3" style=""></div>
+      </div>
+    </td>
+  </tr>
+</table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+  <tr>
+    <td class=" col1 colbackground1 col_width1" style="">
+      <div class=" full levelcolor3">
+        <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+          <tr>
+            <td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+            <td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+            <td class=" content level3 subcell pending">? Implement aliases for countries e.g. Great Britain –&gt; UK, United Kingdom –&gt; UK etc. (an alias definition file is in the making)<br>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+    <td class=" col2 colbackground2 col_width2" style="">
+      <div class=" full levelcolor3">
+        <div class="full column level3" style=""></div>
+      </div>
+    </td>
+  </tr>
+</table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+  <tr>
+    <td class=" col1 colbackground1 col_width1" style="">
+      <div class=" full levelcolor3">
+        <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+          <tr>
+            <td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+            <td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img onmousedown="ioSwitch('pmKl5_FYjEpe', event.shiftKey)" id="imKl5_FYjEpe" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+            <td class=" content level3 subcell done">* New order, rename/refactor the old page/file/url names, add new pages:<br>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+    <td class=" col2 colbackground2 col_width2" style="">
+      <div class=" full levelcolor3">
+        <div class="full column level3" style=""></div>
+      </div>
+    </td>
+  </tr>
+</table>
+<div id="pmKl5_FYjEpe" class="expanded">
+  <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+    <tr>
+      <td class=" col1 colbackground1 col_width1" style="">
+        <div class=" full levelcolor4">
+          <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+            <tr>
+              <td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+              <td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+              <td class=" content level4 subcell">home (old: stats)<br>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td class=" col2 colbackground2 col_width2" style="">
+        <div class=" full levelcolor4">
+          <div class="full column level4" style=""></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+    <tr>
+      <td class=" col1 colbackground1 col_width1" style="">
+        <div class=" full levelcolor4">
+          <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+            <tr>
+              <td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+              <td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+              <td class=" content level4 subcell">summary (--- new page)<br>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td class=" col2 colbackground2 col_width2" style="">
+        <div class=" full levelcolor4">
+          <div class="full column level4" style=""></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+    <tr>
+      <td class=" col1 colbackground1 col_width1" style="">
+        <div class=" full levelcolor4">
+          <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+            <tr>
+              <td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+              <td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+              <td class=" content level4 subcell">milestones (old: story)<br>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td class=" col2 colbackground2 col_width2" style="">
+        <div class=" full levelcolor4">
+          <div class="full column level4" style=""></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+    <tr>
+      <td class=" col1 colbackground1 col_width1" style="">
+        <div class=" full levelcolor4">
+          <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+            <tr>
+              <td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+              <td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+              <td class=" content level4 subcell">birthdays (old: birthdays)<br>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td class=" col2 colbackground2 col_width2" style="">
+        <div class=" full levelcolor4">
+          <div class="full column level4" style=""></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+    <tr>
+      <td class=" col1 colbackground1 col_width1" style="">
+        <div class=" full levelcolor4">
+          <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+            <tr>
+              <td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+              <td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+              <td class=" content level4 subcell">remove the celebrities page. currently on hold (old: people)<br>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td class=" col2 colbackground2 col_width2" style="">
+        <div class=" full levelcolor4">
+          <div class="full column level4" style=""></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+    <tr>
+      <td class=" col1 colbackground1 col_width1" style="">
+        <div class=" full levelcolor4">
+          <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+            <tr>
+              <td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+              <td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+              <td class=" content level4 subcell">date-of-death (--- new page)<br>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td class=" col2 colbackground2 col_width2" style="">
+        <div class=" full levelcolor4">
+          <div class="full column level4" style=""></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+    <tr>
+      <td class=" col1 colbackground1 col_width1" style="">
+        <div class=" full levelcolor4">
+          <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+            <tr>
+              <td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+              <td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+              <td class=" content level4 subcell">life-expectancy (old: expectancy)<br>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td class=" col2 colbackground2 col_width2" style="">
+        <div class=" full levelcolor4">
+          <div class="full column level4" style=""></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+  <tr>
+    <td class=" col1 colbackground1 col_width1" style="">
+      <div class=" full levelcolor3">
+        <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+          <tr>
+            <td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+            <td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img onmousedown="ioSwitch('pnkQJTtHE_hl', event.shiftKey)" id="inkQJTtHE_hl" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+            <td class=" content level3 subcell">Issues/Bugs<br>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+    <td class=" col2 colbackground2 col_width2" style="">
+      <div class=" full levelcolor3">
+        <div class="full column level3" style=""></div>
+      </div>
+    </td>
+  </tr>
+</table>
+<div id="pnkQJTtHE_hl" class="expanded">
+  <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+    <tr>
+      <td class=" col1 colbackground1 col_width1" style="">
+        <div class=" full levelcolor4">
+          <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+            <tr>
+              <td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+              <td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+              <td class=" content level4 subcell">If you go for the very first time to the website you sometimes see a little glitch e.g. some moustache templating code –&gt; plz conceal this<br>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td class=" col2 colbackground2 col_width2" style="">
+        <div class=" full levelcolor4">
+          <div class="full column level4" style=""></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+    <tr>
+      <td class=" col1 colbackground1 col_width1" style="">
+        <div class=" full levelcolor4">
+          <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+            <tr>
+              <td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+              <td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+              <td class=" content level4 subcell">Performance: Disable all animations which are currently not visible e.g. babies animation when you are on life expectancy etc.<br>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td class=" col2 colbackground2 col_width2" style="">
+        <div class=" full levelcolor4">
+          <div class="full column level4" style=""></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+    <tr>
+      <td class=" col1 colbackground1 col_width1" style="">
+        <div class=" full levelcolor4">
+          <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+            <tr>
+              <td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+              <td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+              <td class=" content level4 subcell">Performance: Don't animate if tab is in background –&gt; requestanimationframe? (Only if not a crazy effort)<br>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td class=" col2 colbackground2 col_width2" style="">
+        <div class=" full levelcolor4">
+          <div class="full column level4" style="">Low<br>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+  <tr>
+    <td class=" col1 colbackground1 col_width1" style="">
+      <div class=" full levelcolor2">
+        <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+          <tr>
+            <td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+            <td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img onmousedown="ioSwitch('pi-pngbKeNeE', event.shiftKey)" id="ii-pngbKeNeE" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+            <td class=" content level2 subcell">Page 1 - Home<br>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+    <td class=" col2 colbackground2 col_width2" style="">
+      <div class=" full levelcolor2">
+        <div class="full column level2" style=""></div>
+      </div>
+    </td>
+  </tr>
+</table>
+<div id="pi-pngbKeNeE" class="expanded">
+  <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+    <tr>
+      <td class=" col1 colbackground1 col_width1" style="">
+        <div class=" full levelcolor3">
+          <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+            <tr>
+              <td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+              <td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+              <td class=" content level3 subcell inprogress"> &gt; Get rid of the datepicker and change it to a straighforward DD MM YYYY, please use the same autocomplete mechanism like for the countries e.g. "3" and "03" work both for the month of March –&gt; check for invalidate date like 30th of February<br>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td class=" col2 colbackground2 col_width2" style="">
+        <div class=" full levelcolor3">
+          <div class="full column level3" style=""></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+    <tr>
+      <td class=" col1 colbackground1 col_width1" style="">
+        <div class=" full levelcolor3">
+          <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+            <tr>
+              <td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+              <td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+              <td class=" content level3 subcell done" * >Loading spinner special case for home: Replace the "Go" button with a spinner<br>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td class=" col2 colbackground2 col_width2" style="">
+        <div class=" full levelcolor3">
+          <div class="full column level3" style=""></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+    <tr>
+      <td class=" col1 colbackground1 col_width1" style="">
+        <div class=" full levelcolor3">
+          <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+            <tr>
+              <td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+              <td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img onmousedown="ioSwitch('pczL54hJOfyY', event.shiftKey)" id="iczL54hJOfyY" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+              <td class=" content level3 subcell">Issues/Bugs<br>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td class=" col2 colbackground2 col_width2" style="">
+        <div class=" full levelcolor3">
+          <div class="full column level3" style=""></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <div id="pczL54hJOfyY" class="expanded">
+    <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+      <tr>
+        <td class=" col1 colbackground1 col_width1" style="">
+          <div class=" full levelcolor4">
+            <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+              <tr>
+                <td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+                <td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+                <td class=" content level4 subcell inprogress">Odd behaviour: On a small screen you have to scroll down a little to enter the dates … but then the page will move up after pressing the go botton … and then after the loading is completeted the page will move down. This combination feels odd. Please don't move the page up on pressing the go button or find other elegant workaround.<br>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </td>
+        <td class=" col2 colbackground2 col_width2" style="">
+          <div class=" full levelcolor4">
+            <div class="full column level4" style=""></div>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+      <tr>
+        <td class=" col1 colbackground1 col_width1" style="">
+          <div class=" full levelcolor4">
+            <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+              <tr>
+                <td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+                <td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+                <td class=" content level4 subcell pending">? Get rid of the init loading delay (the idea was to prevent diagrams of being empty … it is to long)<br>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </td>
+        <td class=" col2 colbackground2 col_width2" style="">
+          <div class=" full levelcolor4">
+            <div class="full column level4" style=""></div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+  <tr>
+    <td class=" col1 colbackground1 col_width1" style="">
+      <div class=" full levelcolor2">
+        <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+          <tr>
+            <td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+            <td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img onmousedown="ioSwitch('piOuPEc7qYtE', event.shiftKey)" id="iiOuPEc7qYtE" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+            <td class=" content level2 subcell inprogress">Page 2 - Summary<br>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+    <td class=" col2 colbackground2 col_width2" style="">
+      <div class=" full levelcolor2">
+        <div class="full column level2" style=""></div>
+      </div>
+    </td>
+  </tr>
+</table>
+<div id="piOuPEc7qYtE" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+  <tr>
+    <td class=" col1 colbackground1 col_width1" style="">
+      <div class=" full levelcolor3">
+        <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+          <tr>
+            <td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+            <td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img onmousedown="ioSwitch('pkV5S1OVdFQa', event.shiftKey)" id="ikV5S1OVdFQa" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+            <td class=" content level3 subcell">Intro text:<br>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+    <td class=" col2 colbackground2 col_width2" style="">
+      <div class=" full levelcolor3">
+        <div class="full column level3" style=""></div>
+      </div>
+    </td>
+  </tr>
+</table>
+<div id="pkV5S1OVdFQa" class="expanded">
+  <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+    <tr>
+      <td class=" col1 colbackground1 col_width1" style="">
+        <div class=" full levelcolor4">
+          <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+            <tr>
+              <td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+              <td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+              <td class=" content level4 subcell">No switching for young/old in the introtext. Was dropped ...<br>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td class=" col2 colbackground2 col_width2" style="">
+        <div class=" full levelcolor4">
+          <div class="full column level4" style=""></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+  <tr>
+    <td class=" col1 colbackground1 col_width1" style="">
+      <div class=" full levelcolor3">
+        <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+          <tr>
+            <td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+            <td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img onmousedown="ioSwitch('pkRSRZuc17NY', event.shiftKey)" id="ikRSRZuc17NY" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+            <td class=" content level3 subcell">Animations<br>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+    <td class=" col2 colbackground2 col_width2" style="">
+      <div class=" full levelcolor3">
+        <div class="full column level3" style=""></div>
+      </div>
+    </td>
+  </tr>
+</table>
+<div id="pkRSRZuc17NY" class="expanded">
+  <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+    <tr>
+      <td class=" col1 colbackground1 col_width1" style="">
+        <div class=" full levelcolor4">
+          <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+            <tr>
+              <td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+              <td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+              <td class=" content level4 subcell">A) Counter numbers are animated like the counters in the header<br>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td class=" col2 colbackground2 col_width2" style="">
+        <div class=" full levelcolor4">
+          <div class="full column level4" style=""></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+    <tr>
+      <td class=" col1 colbackground1 col_width1" style="">
+        <div class=" full levelcolor4">
+          <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+            <tr>
+              <td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+              <td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img onmousedown="ioSwitch('pmB3-CvvXWYN', event.shiftKey)" id="imB3-CvvXWYN" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+              <td class=" content level4 subcell">Diagaramm is animated/transition for switching between world/Germany<br>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td class=" col2 colbackground2 col_width2" style="">
+        <div class=" full levelcolor4">
+          <div class="full column level4" style=""></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <div id="pmB3-CvvXWYN" class="expanded">
+    <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+      <tr>
+        <td class=" col1 colbackground1 col_width1" style="">
+          <div class=" full levelcolor5">
+            <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+              <tr>
+                <td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+                <td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+                <td class=" content level5 subcell">B) Curve is moving in for the botton (or something like this) … then<br>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </td>
+        <td class=" col2 colbackground2 col_width2" style="">
+          <div class=" full levelcolor5">
+            <div class="full column level5" style=""></div>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+      <tr>
+        <td class=" col1 colbackground1 col_width1" style="">
+          <div class=" full levelcolor5">
+            <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+              <tr>
+                <td class=" subcell wholedocgutter level5 levelguttercolor5" style="width: 73px;"></td>
+                <td class=" subcell wholedocgutter indicator level5 levelguttercolor5" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+                <td class=" content level5 subcell">C) Green area fill is moving in from the left (maybe curved like you did with the celebrities navigator)<br>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </td>
+        <td class=" col2 colbackground2 col_width2" style="">
+          <div class=" full levelcolor5">
+            <div class="full column level5" style=""></div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+    <tr>
+      <td class=" col1 colbackground1 col_width1" style="">
+        <div class=" full levelcolor4">
+          <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+            <tr>
+              <td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+              <td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+              <td class=" content level4 subcell"><img height="532" width="756" style="vertical-align: middle;" src="population_io_olderyounger_05.jpg" alt="population_io_olderyounger_05"><br>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td class=" col2 colbackground2 col_width2" style="">
+        <div class=" full levelcolor4">
+          <div class="full column level4" style=""></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+  <tr>
+    <td class=" col1 colbackground1 col_width1" style="">
+      <div class=" full levelcolor3">
+        <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+          <tr>
+            <td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+            <td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img onmousedown="ioSwitch('pi2_QAG3YOMc', event.shiftKey)" id="ii2_QAG3YOMc" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+            <td class=" content level3 subcell">Layout<br>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+    <td class=" col2 colbackground2 col_width2" style="">
+      <div class=" full levelcolor3">
+        <div class="full column level3" style=""></div>
+      </div>
+    </td>
+  </tr>
+</table>
+<div id="pi2_QAG3YOMc" class="expanded">
+  <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+    <tr>
+      <td class=" col1 colbackground1 col_width1" style="">
+        <div class=" full levelcolor4">
+          <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+            <tr>
+              <td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+              <td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+              <td class=" content level4 subcell"><img height="1064" width="1512" style="vertical-align: middle;" src="1__%23%24!@%25!%23__population_io_olderyounger_05.jpg" alt="population_io_olderyounger_05"><br>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td class=" col2 colbackground2 col_width2" style="">
+        <div class=" full levelcolor4">
+          <div class="full column level4" style=""></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+  <tr>
+    <td class=" col1 colbackground1 col_width1" style="">
+      <div class=" full levelcolor2">
+        <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+          <tr>
+            <td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+            <td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img onmousedown="ioSwitch('plkB5WMmOruN', event.shiftKey)" id="ilkB5WMmOruN" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+            <td class=" content level2 subcell inprogress">Page 3 - Milestones<br>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+    <td class=" col2 colbackground2 col_width2" style="">
+      <div class=" full levelcolor2">
+        <div class="full column level2" style=""></div>
+      </div>
+    </td>
+  </tr>
+</table>
+<div id="plkB5WMmOruN" class="expanded">
+  <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+    <tr>
+      <td class=" col1 colbackground1 col_width1" style="">
+        <div class=" full levelcolor3">
+          <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+            <tr>
+              <td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+              <td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+              <td class=" content level3 subcell"><img height="549" width="397" style="vertical-align: middle;" src="Screen%20Shot%202014-08-25%20at%2016.42.27.png" alt="Screen Shot 2014-08-25 at 16.42.27"><br>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td class=" col2 colbackground2 col_width2" style="">
+        <div class=" full levelcolor3">
+          <div class="full column level3" style=""></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+    <tr>
+      <td class=" col1 colbackground1 col_width1" style="">
+        <div class=" full levelcolor3">
+          <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+            <tr>
+              <td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+              <td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+              <td class=" content level3 subcell">Add ticks! x: 15yr ticks to the age axis, y: max number e.g. 60M and 3B<br>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td class=" col2 colbackground2 col_width2" style="">
+        <div class=" full levelcolor3">
+          <div class="full column level3" style=""></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+    <tr>
+      <td class=" col1 colbackground1 col_width1" style="">
+        <div class=" full levelcolor3">
+          <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+            <tr>
+              <td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+              <td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+              <td class=" content level3 subcell">Your age pointer: make the line and the black dot vertical, text stays horizontal. Update the your age number according to the selected milestones (not working at the moment = bug)<br>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td class=" col2 colbackground2 col_width2" style="">
+        <div class=" full levelcolor3">
+          <div class="full column level3" style=""></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+    <tr>
+      <td class=" col1 colbackground1 col_width1" style="">
+        <div class=" full levelcolor3">
+          <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+            <tr>
+              <td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+              <td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+              <td class=" content level3 subcell">Get rid of the two rank counters and their corresponding labels<br>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td class=" col2 colbackground2 col_width2" style="">
+        <div class=" full levelcolor3">
+          <div class="full column level3" style=""></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+    <tr>
+      <td class=" col1 colbackground1 col_width1" style="">
+        <div class=" full levelcolor3">
+          <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+            <tr>
+              <td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+              <td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+              <td class=" content level3 subcell">Adjust the height of the two graphs so that they better fill the new whitespace<br>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td class=" col2 colbackground2 col_width2" style="">
+        <div class=" full levelcolor3">
+          <div class="full column level3" style=""></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+    <tr>
+      <td class=" col1 colbackground1 col_width1" style="">
+        <div class=" full levelcolor3">
+          <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+            <tr>
+              <td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+              <td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+              <td class=" content level3 subcell">Add to every graph a label "Age Distribution World" and "Age Distribution {{COUNTRY}}"<br>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td class=" col2 colbackground2 col_width2" style="">
+        <div class=" full levelcolor3">
+          <div class="full column level3" style=""></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+    <tr>
+      <td class=" col1 colbackground1 col_width1" style="">
+        <div class=" full levelcolor3">
+          <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+            <tr>
+              <td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+              <td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+              <td class=" content level3 subcell">Change/reverse graph style to: fill = white and line color = blue-highlight-col<br>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td class=" col2 colbackground2 col_width2" style="">
+        <div class=" full levelcolor3">
+          <div class="full column level3" style=""></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+  <tr>
+    <td class=" col1 colbackground1 col_width1" style="">
+      <div class=" full levelcolor2">
+        <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+          <tr>
+            <td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+            <td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img onmousedown="ioSwitch('peBkihK9qsTr', event.shiftKey)" id="ieBkihK9qsTr" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+            <td class=" content level2 subcell done">Page 4 - Birthdays<br>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+    <td class=" col2 colbackground2 col_width2" style="">
+      <div class=" full levelcolor2">
+        <div class="full column level2" style=""></div>
+      </div>
+    </td>
+  </tr>
+</table>
+<div id="peBkihK9qsTr" class="expanded">
+  <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+    <tr>
+      <td class=" col1 colbackground1 col_width1" style="">
+        <div class=" full levelcolor3">
+          <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+            <tr>
+              <td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+              <td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img onmousedown="ioSwitch('pmjK2J4440tP', event.shiftKey)" id="imjK2J4440tP" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+              <td class=" content level3 subcell">Continent bubbles<br>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td class=" col2 colbackground2 col_width2" style="">
+        <div class=" full levelcolor3">
+          <div class="full column level3" style=""></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <div id="pmjK2J4440tP" class="expanded">
+    <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+      <tr>
+        <td class=" col1 colbackground1 col_width1" style="">
+          <div class=" full levelcolor4">
+            <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+              <tr>
+                <td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+                <td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+                <td class=" content level4 subcell"><img height="118" width="243" style="vertical-align: middle;" src="Screen%20Shot%202014-08-25%20at%2016.57.46.png" alt="Screen Shot 2014-08-25 at 16.57.46"><br>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </td>
+        <td class=" col2 colbackground2 col_width2" style="">
+          <div class=" full levelcolor4">
+            <div class="full column level4" style=""></div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+    <tr>
+      <td class=" col1 colbackground1 col_width1" style="">
+        <div class=" full levelcolor3">
+          <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+            <tr>
+              <td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+              <td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img onmousedown="ioSwitch('pdnxUL-yy0a_', event.shiftKey)" id="idnxUL-yy0a_" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+              <td class=" content level3 subcell">Label: get rid of the percentage value, align the rest of the infos to the left<br>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td class=" col2 colbackground2 col_width2" style="">
+        <div class=" full levelcolor3">
+          <div class="full column level3" style=""></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <div id="pdnxUL-yy0a_" class="expanded">
+    <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+      <tr>
+        <td class=" col1 colbackground1 col_width1" style="">
+          <div class=" full levelcolor4">
+            <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+              <tr>
+                <td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+                <td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+                <td class=" content level4 subcell"><img height="363" width="291" style="vertical-align: middle;" src="Screen%20Shot%202014-08-25%20at%2017.01.07.png" alt="Screen Shot 2014-08-25 at 17.01.07"><br>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </td>
+        <td class=" col2 colbackground2 col_width2" style="">
+          <div class=" full levelcolor4">
+            <div class="full column level4" style=""></div>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+      <tr>
+        <td class=" col1 colbackground1 col_width1" style="">
+          <div class=" full levelcolor4">
+            <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+              <tr>
+                <td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+                <td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+                <td class=" content level4 subcell">Bubbles distribution: the postioning seems sometimes a bit odd, big whole in the middle … more "sticky" would be nicer<br>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </td>
+        <td class=" col2 colbackground2 col_width2" style="">
+          <div class=" full levelcolor4">
+            <div class="full column level4" style=""></div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+  <tr>
+    <td class=" col1 colbackground1 col_width1" style="">
+      <div class=" full levelcolor2">
+        <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+          <tr>
+            <td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+            <td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img onmousedown="ioSwitch('ppr-VTef9DrO', event.shiftKey)" id="ipr-VTef9DrO" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+            <td class=" content level2 subcell">Page 6 - Date of Death<br>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+    <td class=" col2 colbackground2 col_width2" style="">
+      <div class=" full levelcolor2">
+        <div class="full column level2" style=""></div>
+      </div>
+    </td>
+  </tr>
+</table>
+<div id="ppr-VTef9DrO" class="expanded">
+  <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+    <tr>
+      <td class=" col1 colbackground1 col_width1" style="">
+        <div class=" full levelcolor3">
+          <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+            <tr>
+              <td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+              <td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+              <td class=" content level3 subcell">Implement new page … layout is coming, start with a blank page<br>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td class=" col2 colbackground2 col_width2" style="">
+        <div class=" full levelcolor3">
+          <div class="full column level3" style=""></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+    <tr>
+      <td class=" col1 colbackground1 col_width1" style="">
+        <div class=" full levelcolor3">
+          <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+            <tr>
+              <td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+              <td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img onmousedown="ioSwitch('pdkm59ez6yyI', event.shiftKey)" id="idkm59ez6yyI" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+              <td class=" content level3 subcell">Intro text:<br>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td class=" col2 colbackground2 col_width2" style="">
+        <div class=" full levelcolor3">
+          <div class="full column level3" style=""></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <div id="pdkm59ez6yyI" class="expanded">
+    <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+      <tr>
+        <td class=" col1 colbackground1 col_width1" style="border-bottom: none;">
+          <div class=" full levelcolor4">
+            <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+              <tr>
+                <td class=" subcell wholedocgutter level4 levelguttercolor4" style="width: 57px;"></td>
+                <td class=" subcell wholedocgutter indicator level4 levelguttercolor4" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+                <td class=" content level4 subcell">Don’t be scared! But if you are an average world citizen you would die on 9th Jan, 2051. Whereas in your home country France it would be on 8th Feb, 2061.<br>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </td>
+        <td class=" col2 colbackground2 col_width2" style="border-bottom: none;">
+          <div class=" full levelcolor4">
+            <div class="full column level4" style=""></div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class=" level4 colbackground1">
+          <div class=" full levelcolor4">
+            <table border="0" cellspacing="0" cellpadding="0" style="width:100%">
+              <tr>
+                <td style="width: 57px;" class=" subcell wholedocgutter levelguttercolor4"></td>
+                <td class=" subcell wholedocgutter levelguttercolor4" style="width: 15px;"></td>
+                <td class=" subcell" style="width: 16px;"></td>
+                <td class="note subcell">Hint: The date of death function can be found in action in the footer … Andi used it to create an ical event file<br>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </td>
+        <td class=" colbackground2">
+          <div class=" levelcolor4" style="width: 100%; height: 100%; "></div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+  <tr>
+    <td class=" col1 colbackground1 col_width1" style="">
+      <div class=" full levelcolor2">
+        <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+          <tr>
+            <td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+            <td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img onmousedown="ioSwitch('pmpkj1JL9hE-', event.shiftKey)" id="impkj1JL9hE-" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+            <td class=" content level2 subcell inprogress">Page 7 - Life Expectancy<br>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+    <td class=" col2 colbackground2 col_width2" style="">
+      <div class=" full levelcolor2">
+        <div class="full column level2" style=""></div>
+      </div>
+    </td>
+  </tr>
+</table>
+<div id="pmpkj1JL9hE-" class="expanded">
+  <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+    <tr>
+      <td class=" col1 colbackground1 col_width1" style="">
+        <div class=" full levelcolor3">
+          <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+            <tr>
+              <td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+              <td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+              <td class=" content level3 subcell">Change map projection to "robinson projection" see bl.ocks.org/mbostock/3710566<br>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td class=" col2 colbackground2 col_width2" style="">
+        <div class=" full levelcolor3">
+          <div class="full column level3" style=""></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+    <tr>
+      <td class=" col1 colbackground1 col_width1" style="">
+        <div class=" full levelcolor3">
+          <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+            <tr>
+              <td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+              <td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+              <td class=" content level3 subcell">New layout, move country selectors and timeline on top, get rid of the labels "Life expectancy in " and increase length and time range of time-slider. Please make sure to align the new postions in the grid. Layout below is not grid fine-tuned.<br>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td class=" col2 colbackground2 col_width2" style="">
+        <div class=" full levelcolor3">
+          <div class="full column level3" style=""></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+    <tr>
+      <td class=" col1 colbackground1 col_width1" style="">
+        <div class=" full levelcolor3">
+          <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+            <tr>
+              <td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+              <td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+              <td class=" content level3 subcell">Country infos: add the Date of Death underneath<br>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td class=" col2 colbackground2 col_width2" style="">
+        <div class=" full levelcolor3">
+          <div class="full column level3" style=""></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <table cellspacing="0" border="0" cellpadding="0" class="row heighthack">
+    <tr>
+      <td class=" col1 colbackground1 col_width1" style="">
+        <div class=" full levelcolor3">
+          <table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1">
+            <tr>
+              <td class=" subcell wholedocgutter level3 levelguttercolor3" style="width: 41px;"></td>
+              <td class=" subcell wholedocgutter indicator level3 levelguttercolor3" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+              <td class=" content level3 subcell"><img height="620" width="971" style="vertical-align: middle;" src="Screen%20Shot%202014-08-25%20at%2017.04.13.png" alt="Screen Shot 2014-08-25 at 17.04.13"><br>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td class=" col2 colbackground2 col_width2" style="">
+        <div class=" full levelcolor3">
+          <div class="full column level3" style=""></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</body>
+</html>
